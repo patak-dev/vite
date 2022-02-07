@@ -215,6 +215,7 @@ async function publishPackage(
     // await runIfNotDry('yarn', publicArgs, {
     //  stdio: 'pipe'
     // })
+    console.log({ yarn: publicArgs })
     console.log(colors.green(`Successfully published ${pkgName}@${version}`))
   } catch (e: any) {
     if (e.stderr.match(/previously published/)) {
