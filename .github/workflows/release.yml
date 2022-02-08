@@ -48,8 +48,8 @@ jobs:
           # This makes Actions fetch all Git history so that Changesets can generate changelogs with the correct commits
           ref: ${{ github.event.inputs.branch }}
           fetch-depth: 0
-      - run: git config user.name github-actions
-      - run: git config user.email github-actions@github.com
+      - run: git config user.name vitebot
+      - run: git config user.email vitejs.bot@gmail.com
       - uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node }}
